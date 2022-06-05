@@ -1,0 +1,44 @@
+{
+  "name": "walshop",
+  "version": "1.0.0",
+  "description": "Backend app for category",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node server/seeder",
+    "data:destroy": "node server/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajid-619/Category.git"
+  },
+  "keywords": [
+    "sajid619"
+  ],
+  "author": "Sajid Zaman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sajid-619/Category/issues"
+  },
+  "homepage": "https://github.com/sajid-619/Category#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4",
+    "morgan": "^1.10.0",
+    "react-paypal-button-v2": "^2.6.3",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
